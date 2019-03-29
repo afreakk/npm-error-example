@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "module-b": "file:../libs/module-b",
     "module-a": "file:../libs/module-a"
   }
 }
