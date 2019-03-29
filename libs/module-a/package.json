@@ -9,6 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "module-b": "file:../module-b"
+    "jsonschema": "^1.2.4"
   }
 }

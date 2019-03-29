@@ -1,11 +1,11 @@
 Tested with npm version 6.9.0    
-`cd app && npm install`
+`cd app && npm install && node index.js`
 will produce:
 ```
-npm ERR! code ENOLOCAL   
-npm ERR! Could not install from "../libs/libs/module-b" as it does not contain a package.json file.   
+is instanceof validationError: false
 ```
 
 ### Details
-- App depends on module-a
-- module-a depends on module-b
+- libs/module-a depends on jsonschema and has 1 function which returns a instance of ValidationError
+- libs/module-b depends on jsonschema and has 1 functiok which checks if function param is instanceof ValidationError
+- App depends on libs/module-a and libs/module-b, uses a to get instance of ValidationError and uses b to check if the instance received from a is instanceof ValidationError.
